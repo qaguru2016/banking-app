@@ -1,8 +1,10 @@
 package ca.qaguru.banking.entity;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 
+@Data
 @Table(name = "accounts")
 @Entity
 public class Account {
@@ -22,27 +24,4 @@ public class Account {
     public Account() {
     }
 
-    public Long getId() {
-        return this.id;
-    }
-
-    public String getAccountHolderName() {
-        return this.accountHolderName;
-    }
-
-    public double getBalance() {
-        return this.balance;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public void setAccountHolderName(String accountHolderName) {
-        this.accountHolderName = accountHolderName;
-    }
-
-    public void setBalance(double balance) {
-        this.balance = balance;
-    }
 }
